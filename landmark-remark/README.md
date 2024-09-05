@@ -1,5 +1,6 @@
 # Landmark Remark
-The application allows notes on the map
+The application allows notes on the map <br/><br/>
+<img src="asset/banner.png" alt="drawing"/>
 
 ## Technology:
 - Language: Kotlin (Jetpack Compose) <br/>
@@ -19,4 +20,4 @@ The application allows notes on the map
 
 ## Demo
 
-<img src="asset/phone1.png" alt="drawing" width="200"/> &emsp; <img src="asset/phone2" alt="drawing" width="200"/> &emsp; <img src="asset/phone3" alt="drawing" width="200"/> &emsp; <img src="asset/phone4" alt="drawing" width="200"/>
+<img src="asset/phone1.png" alt="drawing" width="200"/> &emsp; <img src="asset/phone2.png" alt="drawing" width="200"/> &emsp; <img src="asset/phone3.png" alt="drawing" width="200"/> &emsp; <img src="asset/phone4.png" alt="drawing" width="400"/>
