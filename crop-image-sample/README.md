@@ -1,6 +1,7 @@
 # Crop Image Sample
 A sample project to implement take photo/open, crop and save image.
 
+
 ## Technology:
 - Language: Kotlin (Jetpack Compose) <br/>
 - Skills: Camera hardware, Rotate bitmap image, Write bitmap image
@@ -18,11 +19,14 @@ A sample project to implement take photo/open, crop and save image.
 
 <img src="asset/phone1.png" alt="drawing" width="200"/> &emsp; <img src="asset/phone2.png" alt="drawing" width="200"/> &emsp; <img src="asset/phone3.png" alt="drawing" width="200"/> &emsp; 
 
-<video width="320" controls>
-  <source src="asset/crop_module.mov" type="video/mov">
-</video>
+
+https://github.com/user-attachments/assets/5406cdca-19a5-4299-aaa1-857377b19124
+
 
 <br/>
+
+
 ## Ref 
--  Source code: https://github.com/MickyHQH/crop_image_module
+
+- Source code: https://github.com/MickyHQH/crop_image_module
 - Core in: https://github.com/SmartToolFactory/Compose-Cropper
