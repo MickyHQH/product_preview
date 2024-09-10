@@ -16,11 +16,14 @@ A new app for scanning and generating QR code.
 ## Demo
 
 <img src="asset/phone1.png" alt="drawing" width="200"/> &emsp; <img src="asset/phone2.png" alt="drawing" width="200"/> &emsp; <img src="asset/phone3.png" alt="drawing" width="200"/> &emsp; <img src="asset/phone4.png" alt="drawing" width="200"/> &emsp; 
+<br/>
 
-<video width="320" controls>
-  <source src="asset/qr_manager.mp4" type="video/mov">
-</video>
+
+https://github.com/user-attachments/assets/79528cc2-76a6-4bc3-88f4-548c5f337501
+
+
 
 <br/>
+
 ## Ref 
 - QR Generate core in: https://github.com/lightsparkdev/compose-qr-code
