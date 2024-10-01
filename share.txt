@@ -1,0 +1,74 @@
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        val channelId = this.getString(R.string.default_notification_channel_id)
+        val channel = NotificationChannel(channelId, "Huy", NotificationManager.IMPORTANCE_DEFAULT)
+        getSystemService(NotificationManager::class.java).createNotificationChannel(channel)
+        setContent {
+            SocialDemo1Theme {
+                MainNavigation()
+            }
+        }
+        handleDeepLink(intent)
+    }
+
+    private fun handleDeepLink(intent: Intent?) {
+        intent?.extras?.getString("deeplink")?.let {
+            val websiteIntent = Intent(Intent.ACTION_VIEW, "myapp://haquanghuy.com/${it}".toUri())
+            startActivity(websiteIntent)
+        }
+    }
+}
+
+
+mani..
+<activity
+<intent-filter>
+                <data android:host="haquanghuy.com" android:scheme="myapp"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+/>
+
+<service
+            android:name=".MyFirebaseService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/purple_200" />
+
+----
+nav
+
+deepLinks = listOf(
+                navDeepLink {
+                    uriPattern = "myapp://haquanghuy.com/user/{id}"
+                    action = Intent.ACTION_VIEW
+                } // Note that this pattern has no relation to the route itself
+            ),
+
+
+
+
+val deepLinkIntent = Intent(
+                Intent.ACTION_VIEW,
+                "myapp://haquanghuy.com/${data["deeplink"]}".toUri(),
+            )
+
+            val pendingIntent: PendingIntent? = TaskStackBuilder.create(this).run {
+                addNextIntentWithParentStack(deepLinkIntent)
+                getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+            }
